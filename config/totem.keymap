@@ -14,7 +14,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -78,9 +77,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp Q       &kp W       &kp E         &kp R        &kp T            &kp Y        &kp U        &kp I          &kp O       &kp P
-                  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G            &kp H        &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RGUI SEMI
-&kp LEFT_CONTROL  &kp Z       &kp X       &kp C         &kp V        &kp B            &kp N        &kp M        &kp COMMA      &kp DOT     &kp SLASH       &kp APOS
+                  &kp Q       &kp W       &kp E         &kp R        &kp T            &kp Y        &kp U        &kp I         &kp O       &kp P
+                  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G            &kp H        &mt RSHFT J  &mt RCTRL K   &mt RALT L  &mt RGUI SEMI
+&kp LEFT_CONTROL  &kp Z       &kp X       &kp C         &kp V        &kp B            &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp APOS
                                           &kp LEFT_GUI  &kp TAB      &lt NAV SPACE    &lt SYM RET  &kp BSPC     &kp LEFT_ALT
             >;
         };
@@ -160,6 +159,15 @@
               &bootloader   &trans        &trans        &trans        &trans            &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                           &trans        &trans        &trans            &trans  &trans  &trans
+            >;
+        };
+
+        COLEMAK-DH {
+            bindings = <
+        &kp Q  &kp W  &kp F   &kp P   &kp B     &trans  &trans  &trans  &trans  &trans
+        &kp A  &kp R  &kp S   &kp T   &kp G     &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z  &kp X  &kp C   &kp D   &kp V     &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
